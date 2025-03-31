@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üretim Takip</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>ÜRETİM TAKİP SİSTEMİ</h2>
+
+        <!-- TABLO 1: Üretim Operasyon Bildirimleri -->
+        <div class="table-container">
+            <h3>Üretim Operasyon Bildirimleri</h3>
+            <table id="uretimTablosu">
+                <thead>
+                    <tr>
+                        <th>Kayıt No</th>
+                        <th>Başlangıç</th>
+                        <th>Bitiş</th>
+                        <th>Statü</th>
+                        <th>Duruş Nedeni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Manuel veri girişleri buraya eklenecek -->
+                </tbody>
+            </table>
+            <div class="input-group">
+                <input type="number" id="kayitNo" placeholder="Kayıt No">
+                <input type="datetime-local" id="baslangic">
+                <input type="datetime-local" id="bitis">
+                <select id="statu">
+                    <option value="ÜRETİM">ÜRETİM</option>
+                    <option value="DURUŞ">DURUŞ</option>
+                </select>
+                <input type="text" id="durusNedeni" placeholder="Duruş Nedeni">
+                <button class="add-btn" onclick="ekleUretimKaydi()">Ekle</button>
+            </div>
+        </div>
+
+        <!-- TABLO 2: Mevcut Kayıtlı Standart Duruş Bilgileri -->
+        <div class="table-container">
+            <h3>Mevcut Kayıtlı Standart Duruş Bilgileri</h3>
+            <table id="standartDuruşTablosu">
+                <thead>
+                    <tr>
+                        <th>Başlangıç</th>
+                        <th>Bitiş</th>
+                        <th>Duruş Nedeni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:00</td>
+                        <td>10:15</td>
+                        <td>Çay Molası</td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>12:30</td>
+                        <td>Yemek Molası</td>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td>15:15</td>
+                        <td>Çay Molası</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TABLO 3: Hesaplanmış Çıktı Tablosu -->
+        <div class="table-container">
+            <h3>İşlenmiş Kayıtlar</h3>
+            <table id="islenmisTablo">
+                <thead>
+                    <tr>
+                        <th>Başlangıç</th>
+                        <th>Bitiş</th>
+                        <th>Statü</th>
+                        <th>Duruş Nedeni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Hesaplanmış veriler buraya eklenecek -->
+                </tbody>
+            </table>
+            <button class="calc-btn" onclick="hesaplaTablo()">Hesapla</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">© 2025 Üretim Takip Sistemi</div>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
